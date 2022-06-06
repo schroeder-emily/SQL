@@ -1,0 +1,49 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 USE dojos_and_ninjas_schema;\
+\
+\
+-- INSERT INTO dojos (name) VALUES ('NinetyNine');\
+-- INSERT INTO dojos (name) VALUES ('Triton');\
+-- INSERT INTO dojos (name) VALUES ('Gracie');\
+\
+-- SET SQL_SAFE_UPDATES = 0;\
+-- DELETE FROM dojos;\
+\
+-- INSERT INTO dojos (name) VALUES ('Tulsa');\
+-- INSERT INTO dojos (name) VALUES ('Bixby');\
+-- INSERT INTO dojos (name) VALUES ('Jenks');\
+\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Emily', 'Schroeder', 38, 4);\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Goose', 'Schroeder', 6, 4);\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Ducky', 'Schroeder', 13, 4);\
+\
+\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Emily', 'Schroeder', 38, 5);\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Goose', 'Schroeder', 6, 5);\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Ducky', 'Schroeder', 13, 5);\
+\
+\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Emily', 'Schroeder', 38, 6);\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Goose', 'Schroeder', 6, 6);\
+-- INSERT INTO ninjas (first_name, last_name, age, dojo_id)\
+-- VALUES ('Ducky', 'Schroeder', 13, 6);\
+\
+-- SELECT * FROM ninjas WHERE dojo_id = 4;\
+-- SELECT * FROM ninjas WHERE dojo_id = 6;\
+SELECT * FROM dojos\
+WHERE dojos.id = (SELECT dojo_id FROM ninjas ORDER BY dojo_id DESC LIMIT 1);\
+}

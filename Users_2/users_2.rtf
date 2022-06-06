@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red255\green255\blue255;
+\red221\green210\blue93;\red0\green0\blue0;\red244\green0\blue93;\red161\green106\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c100000\c100000\c99910;
+\cssrgb\c89392\c84861\c43795;\cssrgb\c0\c1\c1;\cssrgb\c97728\c14727\c44020;\cssrgb\c69867\c52369\c100000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+INSERT INTO users (first_name, last_name, email)\
+VALUES (\cf2 \'93Emily\'94\cf2 ,\cf2 \'94Schroeder\cf2 ,\cf2 \'94emmytheduck@gmail.com\'94\cf2 );\
+\pard\pardeftab720\partightenfactor0
+\cf6 INSERT INTO users (first_name, last_name, email)\
+VALUES (\'93Goose\'94,\'94Schroeder,\'94goosecat@gmail.com\'94);\
+INSERT INTO users (first_name, last_name, email)\
+VALUES (\'93Ducky\'94,\'94Schroeder,\'94duckycat@gmail.com\'94);\cf2 \
+\
+\
+SELECT \cf2 *\cf2  FROM users;\
+\
+SELECT \cf2 *\cf2  FROM users\
+WHERE email \cf2 =\cf2  \cf2 \'91emmytheduck@gmail.com'\cf2 ;\
+\
+SELECT \cf2 *\cf2  FROM users\
+WHERE id \cf2 =\cf2  \cf2 3\cf2 ;\
+\
+UPDATE users SET last_name \cf2 =\cf2  \cf2 "Pancakes"\cf2 \
+WHERE users.id \cf2 =\cf2  \cf2 3\cf2 ;\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 DELETE\cf2  FROM users\
+WHERE users.id \cf2 =\cf2  \cf2 2\cf2 ;\
+\
+SELECT \cf2 *\cf2  FROM users\
+ORDER BY first_name DESC;}
